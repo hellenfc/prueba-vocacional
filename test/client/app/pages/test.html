@@ -1,0 +1,7 @@
+<h1>Category: {{test.test.category}}</h1>
+<div ng-repeat="question in test.test.questions">
+  <h3>{{question.question}}</h3>
+  <input type="radio" ng-model="test.answer[$index]" name="{{question._id}}" value="true">Sí</input>
+  <input type="radio" ng-model="test.answer[$index]" name="{{question._id}}" value="false">No</input>
+</div>
+<button ng-click="test.showAnswer()" type="button">Show</button>

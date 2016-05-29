@@ -1,0 +1,16 @@
+<h1>Ready to Deploy</h1>
+<input type="text" ng-model="get.data.category" placeholder="Category"/>
+<table>
+  <thead>
+    <tr>
+      <td><b>Question</b></td>
+    </tr>
+  </thead>
+  <tbody ng-repeat="question in get.data.questions">
+    <tr><td>{{ question.question }}</td><tr>
+  </tbdody>
+</table>
+<form ng-submit="get.addQuestion()">
+  <input type="text" ng-model="get.selectedQuestion"/>
+</form>
+<button ng-click="get.saveTest()">Save</button>
